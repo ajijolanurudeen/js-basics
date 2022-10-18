@@ -9,39 +9,145 @@
 <body>
     <script>
     
-        let marks;
-        if (marks > 90){
-            console.log('AA');
-        }
+        // let marks;
+        // if (marks > 90){
+        //     console.log('AA');
+        // }
         
-        else if (marks > 80 && marks <= 90 ) {
-            console.log('AB');
-        }
+        // else if (marks > 80 && marks <= 90 ) {
+        //     console.log('AB');
+        // }
         
         
-        else if ( marks > 70 && marks <= 80 ){
-            console.log('BB');
-        }
+        // else if ( marks > 70 && marks <= 80 ){
+        //     console.log('BB');
+        // }
         
-        else if (marks > 60 && marks <= 70 ){
-            console.log('BC');
-        }
+     // else if (marks > 60 && marks <= 70 ){
+                //     console.log('BC');
+        // }
         
-        else if ( marks > 50 && marks <= 60 ){
-            console.log('CC');
-        }
+        // else if ( marks > 50 && marks <= 60 ){
+        //     console.log('CC');
+        // }
         
-        else if ( marks > 40 && marks <= 50 ){
-            console.log('CD');
-        }
+        // else if ( marks > 40 && marks <= 50 ){
+        //     console.log('CD');
+        // }
         
-        else if ( marks > 30 && marks <= 40 ){
-            console.log('DD');
-        }
+        // else if ( marks > 30 && marks <= 40 ){
+        //     console.log('DD');
+        // }
         
-        else {
-            console.log('FF');
-        }
-        </script>
-</body>
+        // else {
+        //     console.log('FF');
+        // }
+        // function showStars(number){
+        //     for (let i = 1; i <= number ; i++) {
+        //         for (let j = 1; j < i ; j++)
+        //         console.log("*");
+                
+        //     }
+        // }
+        // showStars(3)
+const adress ={
+  street:"osekita",
+  city:"ekiti",
+  zipcode:1123
+ }
+function showAdress(adress) {
+   for (let key of Object.keys(adress)) 
+    console.log(adress[key])
+}
+showAdress(adress)
+// //////////////////////////////////////////////////////
+// FACTORY FUNCTION
+
+function createAdress(adress) {
+        return adress
+     }
+const newAdressx = createAdress(adress)
+///////////////////////////////////////////////////////////////
+// CONSTRUCTOR FUNCTION
+
+function CreateAdress(adress) {
+    this.adress = adress
+    return this.adress
+}
+const newAdress = new CreateAdress(adress)
+/////////////////////////////////////////////////////////
+const adress1 =  new CreateAdress(adress)
+const adress2 =  new CreateAdress(adress)
+
+// ARE EQUAL
+
+function areEqual(a,b) {
+    if (a===b) console.log(true); else console.log(false)
+    
+}
+areEqual(adress1,adress2)
+
+// ARE SAME
+
+function areSame(a, b) {
+    if (a === adress && b === adress2) console.log(true); else console.log('false');
+}
+ areSame(adress1, adress2);
+
+///////////////////////////////////////////////////////////////
+// ASSIGNMENT4
+const blogPost = {
+    title: 'harry potter',
+    body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    author: 'rowling',
+    views: 25,
+    comments: {
+        comment1: {
+            author: 'chimamanda',
+            body: 'Lorem ipsum dolor sit amet consectetur adip',
+            isLive: true, 
+        },
+
+        comment2: {
+            author: 'elnathan',
+            body: 'Lorem ipsum dolor sit amet consectetur adip',
+            isLive: true, 
+        },
+        comment3: {
+            author: 'soyinka',
+            body: 'Lorem ipsum dolor sit amet consectetur adip',
+            isLive: false, 
+        },
+
+   }
+ }
+ ////////////////////////////////////////////////////////////
+ASSIGNMENT5
+
+let programming = {
+    languages: ["JavaScript", "Python", "Ruby"],
+    isChallenging: true,
+    isRewarding: true,
+    difficulty: 8,
+    jokes:"http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke"
+};
+
+
+programming.languages.push('Go'); 
+
+
+programming.difficulty = 7; 
+
+delete programming.jokes; 
+
+programming.isFun = true 
+
+for (language of programming.languages) console.log(language ); 
+
+for (let key of Object.keys(programming)) console.log(key); 
+
+for (let key of Object.keys(programming)) console.log(programming[key]); 
+
+</script>
+ </body>
 </html>
